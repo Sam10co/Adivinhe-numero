@@ -1,0 +1,85 @@
+/* Dupla: Samel Silva e Rhayane Ribeiro */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: #222;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 36px;
+    color: #1976d2;
+    font-size: 2.4em;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 6px #e3f2fd;
+}
+
+the.game-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 32px 36px 36px 36px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(30, 64, 175, 0.12), 0 1.5px 6px #8fd3f4;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.15em;
+    margin-bottom: 18px;
+    border: 2px solid #1976d2;
+    border-radius: 7px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type=number]:focus {
+    border-color: #43cea2;
+    background: #e3f2fd;
+}
+
+button {
+    padding: 12px 22px;
+    font-size: 1.07em;
+    background: linear-gradient(90deg, #43cea2 0%, #1976d2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(67, 206, 162, 0.13);
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #1976d2 0%, #43cea2 100%);
+}
+
+#mensagem {
+    margin-top: 18px;
+    font-weight: bold;
+    min-height: 32px;
+    font-size: 1.18em;
+    color: #1976d2;
+    text-align: center;
+}
+
+#tentativas, #palpites-anteriores {
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+    color: #555;
+}
+
+#palpites-anteriores {
+    color: #888;
+    font-style: italic;
+}
