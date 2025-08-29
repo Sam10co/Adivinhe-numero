@@ -14,7 +14,7 @@ const btnReiniciar = document.getElementById('btn-reiniciar');
 
 // Inicia o jogo
 function iniciarJogo() {
-    numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    numeroSecreto = Math.floor(Math.random() * 20) + 1;
     tentativasRestantes = MAX_TENTATIVAS;
     palpites = [];
     exibirMensagem('Tente adivinhar o número secreto!');
@@ -29,8 +29,8 @@ function iniciarJogo() {
 
 function verificarPalpite() {
     const palpite = Number(inputPalpite.value);
-    if (!palpite || palpite < 1 || palpite > 100) {
-        exibirMensagem('Digite um número válido entre 1 e 100.');
+    if (!palpite || palpite < 1 || palpite > 20) {
+        exibirMensagem('Digite um número válido entre 1 e 20.');
         return;
     }
 
