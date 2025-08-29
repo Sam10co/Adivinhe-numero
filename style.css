@@ -1,4 +1,5 @@
-/* Dupla: Samel Silva e Rhayane Ribeiro */
+/* Projeto Advinha Número | Dupla: Samuel Silva e Rhayane Ribeiro */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
@@ -17,15 +18,22 @@ h1 {
     font-size: 2.4em;
     letter-spacing: 2px;
     text-shadow: 0 2px 6px #e3f2fd;
+    transition: color 0.3s;
 }
 
-the.game-container {
+.game-container {
     max-width: 420px;
     margin: 40px auto;
     background: rgba(255, 255, 255, 0.98);
     padding: 32px 36px 36px 36px;
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(30, 64, 175, 0.12), 0 1.5px 6px #8fd3f4;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
 input[type=number] {
@@ -37,6 +45,7 @@ input[type=number] {
     border-radius: 7px;
     box-sizing: border-box;
     outline: none;
+    transition: border-color 0.2s;
 }
 
 input[type=number]:focus {
@@ -57,10 +66,20 @@ button {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
     box-shadow: 0 2px 10px rgba(67, 206, 162, 0.13);
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
 button:hover, button:focus {
     background: linear-gradient(90deg, #1976d2 0%, #43cea2 100%);
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.14);
+}
+
+#btn-reiniciar {
+    background: linear-gradient(90deg, #e8711a 0%, #ff8c43 100%);
+}
+
+#btn-reiniciar:hover, #btn-reiniciar:focus {
+    background: linear-gradient(90deg, #ff8c43 0%, #e8711a 100%);
 }
 
 #mensagem {
@@ -70,6 +89,7 @@ button:hover, button:focus {
     font-size: 1.18em;
     color: #1976d2;
     text-align: center;
+    transition: color 0.2s;
 }
 
 #tentativas, #palpites-anteriores {
@@ -82,4 +102,15 @@ button:hover, button:focus {
 #palpites-anteriores {
     color: #888;
     font-style: italic;
+}
+
+@media (max-width: 560px) {
+    .game-container {
+        max-width: 97vw;
+        padding: 18px 10px 24px 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-top: 18px;
+    }
 }
